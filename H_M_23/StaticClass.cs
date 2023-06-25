@@ -15,7 +15,7 @@ namespace H_M_23
             CtOf = n;
             for (int i = 1; i <= n; i++)
             {
-                var path = $"D:\\Study\\.Net(Najot)\\C#\\H_M_23\\TxtFiles\\{i}.txt";
+                var path = $"{Directory.GetCurrentDirectory()}\\TxtFiles\\{i}.txt";
                 FileStream f = new FileStream(path, FileMode.Create);
                 f.Close();
             }
@@ -27,7 +27,7 @@ namespace H_M_23
         {
             for (int i = 1; i <= CtOf; i++)
             {
-                var r = new StreamWriter($"D:\\Study\\.Net(Najot)\\C#\\H_M_23\\TxtFiles\\{i}.txt", false, Encoding.UTF8);
+                var r = new StreamWriter($"{Directory.GetCurrentDirectory()}\\TxtFiles\\{i}.txt", false, Encoding.UTF8);
                 r.WriteLine(s);
                 r.Close();
             }
